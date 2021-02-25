@@ -11,8 +11,6 @@
     pos1 dw 0  ; end pos of del word
     pos2 dw 0  ; buffer
     pos3 dw 0  ; for current position of new_string
-    pos4 dw 0  
-    pos5 dw 0  
     
     
 .code        
@@ -33,9 +31,7 @@
         mov dl, chr
         int 21h
     endm
-    
-; _cdaf baaq acda             
-                              
+                                  
 start:
     
     
@@ -74,13 +70,11 @@ for1:   ; read space / tab
 for12:
     
     mov pos0, si
-    ;mov pos4, si 
      
            
 for2:   ; read letters    
     
     mov pos1, si
-    ;mov pos5, si
     cmp string[si], 20h
     je for3   
     cmp string[si], 24h
