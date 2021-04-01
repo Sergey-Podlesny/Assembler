@@ -29,7 +29,7 @@ input macro string
         mov ah, 0Ah
         mov dx, offset string
         int 21h
-        
+                                                                
 
         
 endm
@@ -138,8 +138,8 @@ mult:
         mov ax,first
         mov bx,second
         mov cx, ax
-        xor cx, bx
         xor di, di
+        xor cx, bx
         jns notSignedAnswMul
         mov di, 1
 notSignedAnswMul:
